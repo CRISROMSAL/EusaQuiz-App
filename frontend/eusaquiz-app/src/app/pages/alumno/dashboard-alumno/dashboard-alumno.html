@@ -1,0 +1,98 @@
+<!-- Contenedor principal del dashboard -->
+  <div class="dashboard-container">
+    
+    <!-- Header con logo y usuario -->
+    <header class="dashboard-header">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="/img/eusaquiz-logo.png" alt="Logo Eusa Quiz" class="logo-img"/>
+        </div>
+      </div>
+      
+      
+      <div class="user-info">
+        <div class="user-avatar user-avatar-blue">M</div>
+        <span class="user-name">MARCO ANTONIO OCHAVO FERNÁNDEZ</span>
+      </div>
+    </header>
+
+    <!-- Botones de acción principales -->
+    <div class="action-buttons">
+      <button class="btn btn-join">Unirse con código</button>
+      <button class="btn btn-analytics">Análisis y reporte</button>
+    </div>
+
+    <!-- Sección de partidas programadas -->
+    <section class="scheduled-games-section">
+      <h2 class="section-title">Partidas programadas</h2>
+      
+      <div class="game-card game-card-scheduled">
+        <div class="game-info">
+          <h3 class="game-title">Quiz Angular/ Optativa DAW</h3>
+          <p class="game-stats">20/03/2025 a las 12:00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de historial de resultados -->
+    <section class="history-section">
+      <h2 class="section-title">Historial de resultados</h2>
+      
+      <!-- Resultado 1 -->
+      <div class="result-card result-card-green">
+        <div class="result-info">
+          <h3 class="result-title">Quiz de PHP/ Desarrollo Web en Entorno Servidor</h3>
+          <p class="result-stats">12/14 correctas</p>
+        </div>
+        <div class="result-percentage">
+          <span class="percentage-text percentage-green">85%</span>
+        </div>
+      </div>
+
+      <!-- Resultado 2 -->
+      <div class="result-card result-card-red">
+        <div class="result-info">
+          <h3 class="result-title">Quiz de JavaScript/ Desarrollo Web en Entorno Cliente</h3>
+          <p class="result-stats">5/12 correctas</p>
+        </div>
+        <div class="result-percentage">
+          <span class="percentage-text percentage-red">47,65%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de progreso por asignatura -->
+    <section class="progress-section">
+      <h2 class="section-title">Progreso por asignatura</h2>
+      
+      <!-- Progreso 1 - Desarrollo Web en Entorno Servidor -->
+      <div class="progress-item">
+        <div class="progress-header">
+          <h3 class="progress-name">Desarrollo Web en Entorno Servidor</h3>
+          <span class="progress-percentage progress-percentage-blue">80%</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar progress-bar-blue" style="width: 80%"></div>
+        </div>
+      </div>
+
+      <!-- Progreso 2 - Desarrollo Web en Entorno Cliente -->
+      <div class="progress-item">
+        <div class="progress-header">
+          <h3 class="progress-name">Desarrollo Web en Entorno Cliente</h3>
+          <span class="progress-percentage progress-percentage-red">45%</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar progress-bar-red" style="width: 45%"></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+<hr />
+<h3>Prueba conexión backend</h3>
+<pre>{{ backendMsg }}</pre>
+
+
+
