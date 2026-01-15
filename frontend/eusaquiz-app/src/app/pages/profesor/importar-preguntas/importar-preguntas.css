@@ -1,0 +1,281 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Página blanca, misma tipografía que dashboard */
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* HEADER (idéntico dashboard) */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px 0;
+}
+
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.logo {
+  background-color: transparent;
+  padding: 0;
+}
+
+.logo-img {
+  height: 100px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Título centrado */
+.page-title {
+  flex: 1;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 20px;
+}
+
+/* Usuario (idéntico dashboard) */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.user-avatar-blue {
+  background-color: #0891b2;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* CONTENIDO */
+.import-content {
+  display: grid;
+  gap: 26px;
+}
+
+/* DROPZONE (perfecta, centrada y limpia) */
+.dropzone {
+  border: 2px dashed #0891b2;
+  background: #eef8fb;
+  border-radius: 8px;
+  padding: 28px 22px;
+}
+
+.dropzone-inner {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dropzone-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.dropzone-subtitle {
+  font-size: 13px;
+  color: #4b5b62;
+  margin-bottom: 16px;
+}
+
+/* Input oculto (el click va por label) */
+.file-input {
+  position: absolute;
+  left: -9999px;
+}
+
+/* SECCIONES */
+.block {
+  display: grid;
+  gap: 12px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Archivo cargado (mismo estilo tarjetas del dashboard) */
+.loaded-box {
+  background-color: #c8e6d4;
+  border-left: 4px solid #2d7a4f;
+  border-radius: 8px;
+  padding: 18px 22px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.file-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.file-meta {
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+/* Vista previa */
+.preview {
+  gap: 14px;
+}
+
+.question-card {
+  background: #ffffff;
+  border: 2px solid #1f4b9a;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.q-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.q-answer {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.35;
+}
+
+.more {
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+  margin-top: 2px;
+}
+
+/* BOTONES (idénticos al dashboard en tamaño/comportamiento) */
+.btn {
+  padding: 18px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background-color: #0891b2;
+}
+.btn-primary:hover {
+  background-color: #0e7490;
+}
+
+.btn-success {
+  background-color: #2d7a4f;
+}
+.btn-success:hover {
+  background-color: #236140;
+}
+
+.btn-secondary {
+  background-color: #0891b2;
+}
+.btn-secondary:hover {
+  background-color: #0e7490;
+}
+
+.btn-danger {
+  background-color: #c0392b;
+}
+.btn-danger:hover {
+  background-color: #a93226;
+}
+
+/* Acciones centradas */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding-top: 6px;
+}
+
+/* Responsive igual criterio que dashboard */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .page-title {
+    margin: 0;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .user-name {
+    display: none;
+  }
+}

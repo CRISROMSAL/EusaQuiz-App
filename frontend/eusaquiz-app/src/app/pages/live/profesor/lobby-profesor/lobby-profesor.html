@@ -1,0 +1,82 @@
+ <!-- Contenedor principal del dashboard -->
+  <div class="dashboard-container">
+    <!-- Header con logo y usuario -->
+    <header class="dashboard-header">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="/img/eusaquiz-logo.png" alt="Logo Eusa Quiz" class="logo-img"/>
+            </div>
+        </div>
+      
+      <div class="user-info">
+        <div class="user-avatar user-avatar-blue">W</div>
+        <span class="user-name">WILLMAN ACOSTA LUGO</span>
+      </div>  
+
+    </header>
+
+  <!-- Barra superior (quiz + tiempo) -->
+  <section class="top-bar">
+    <div class="quiz-info">
+      <div class="quiz-title">Quiz Angular</div>
+      <div class="quiz-code">Código: <strong>{{ pin }}</strong></div>
+    </div>
+
+    <div class="quiz-time">
+      <span class="time-label">Tiempo total:</span>
+      <span class="time-value">{{ tiempoTotal }}</span>
+    </div>
+  </section>
+
+  <!-- Cards centrales -->
+  <section class="stats-row">
+    <div class="stat-box">
+      <div class="stat-label">Alumnos conectados</div>
+      <div class="stat-main">
+        <span class="stat-current">{{ conectados }}</span><span class="stat-sep">/</span
+        ><span class="stat-total">{{ totalAlumnos }}</span>
+      </div>
+      <div class="stat-sub">{{ porcentajeConectado }}% conectado</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-label">Código de Acceso</div>
+      <button class="btn btn-analytics btn-copy" type="button" (click)="copiarUrl()">
+        Copiar URL
+      </button>
+      <div class="hint">Se copia el enlace para que el alumno entre al lobby.</div>
+    </div>
+  </section>
+
+  <!-- Lista alumnos -->
+  <section class="list-section">
+    <h2 class="section-title">Lista de Alumnos Conectados</h2>
+
+    <div class="list-card">
+      <div class="list-scroll">
+        <div
+          class="alumno-row"
+          *ngFor="let a of alumnos"
+          [class.estado-ok]="a.estado === 'conectado'"
+          [class.estado-wait]="a.estado === 'conectando'"
+          [class.estado-bad]="a.estado === 'no_conectado'"
+        >
+          <div class="alumno-name">{{ a.nombre }}</div>
+          <div class="alumno-state">
+            <ng-container [ngSwitch]="a.estado">
+              <span *ngSwitchCase="'conectado'">Conectado</span>
+              <span *ngSwitchCase="'conectando'">Conectando...</span>
+              <span *ngSwitchCase="'no_conectado'">No conectado</span>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botones -->
+  <section class="actions">
+    <button class="btn btn-create" type="button" (click)="iniciarPartida()">Iniciar Partida</button>
+    <button class="btn btn-cancel" type="button" (click)="cancelar()">Cancelar</button>
+  </section>
+</div>

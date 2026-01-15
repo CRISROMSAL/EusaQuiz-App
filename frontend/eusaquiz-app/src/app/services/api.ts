@@ -1,19 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-
-  // URL base de tu backend
-  private baseUrl = 'http://localhost:3000';
+  private readonly baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
-  // Petición de prueba
   testConnection(): Observable<any> {
-  return this.http.get(`${this.baseUrl}/ping`);
-}
+    return this.http.get(`${this.baseUrl}/ping`);
+  }
 }

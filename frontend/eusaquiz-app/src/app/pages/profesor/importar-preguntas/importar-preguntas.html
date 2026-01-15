@@ -1,0 +1,75 @@
+<div class="dashboard-container">
+
+  <!-- HEADER -->
+  <header class="dashboard-header">
+    <div class="logo-container">
+      <div class="logo">
+        <img src="/img/eusaquiz-logo.png" alt="Logo Eusa Quiz" class="logo-img" />
+      </div>
+    </div>
+
+    <h1 class="page-title">Importar Preguntas</h1>
+
+    <div class="user-info">
+      <div class="user-avatar user-avatar-blue">W</div>
+      <span class="user-name">WILLMAN ACOSTA LUGO</span>
+    </div>
+  </header>
+
+  <main class="import-content">
+
+    <!-- ZONA DE SUBIDA -->
+    <section class="dropzone" aria-label="Subir archivo">
+      <div class="dropzone-inner">
+        <p class="dropzone-title">Arrastra tu archivo aquí</p>
+        <p class="dropzone-subtitle">PDF, Excel o Google Forms</p>
+
+        <!-- input real (luego lo conectamos con TS) -->
+        <input id="fileInput" type="file" class="file-input" />
+
+        <label class="btn btn-primary" for="fileInput">Seleccionar archivo</label>
+      </div>
+    </section>
+
+    <!-- ARCHIVO CARGADO -->
+    <section class="block">
+      <h2 class="section-title">Archivo cargado</h2>
+
+      <div class="loaded-box">
+        <div class="loaded-main">
+          <p class="file-name">examen_angular.pdf</p>
+          <p class="file-meta">15 preguntas detectadas · 2.4 MB</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISTA PREVIA -->
+    <section class="block preview">
+      <h2 class="section-title">Vista previa de preguntas</h2>
+
+      <article class="question-card">
+        <p class="q-title">P1: ¿Cuál es el propósito de la inyección de dependencias en Angular?</p>
+        <p class="q-answer">
+          Respuesta correcta: proporcionar instancias de clases (como servicios) a otras clases sin que estas tengan que crearlas directamente.
+        </p>
+      </article>
+
+      <article class="question-card">
+        <p class="q-title">P2: ¿Cuál es el propósito principal del comando ng serve en el Angular CLI?</p>
+        <p class="q-answer">
+          Respuesta correcta: iniciar un servidor de desarrollo local para compilar y servir la aplicación Angular.
+        </p>
+      </article>
+
+      <p class="more">… y 13 preguntas más</p>
+    </section>
+
+    <!-- ACCIONES -->
+    <section class="actions">
+      <button class="btn btn-success" type="button">Importar todas</button>
+      <button class="btn btn-secondary" type="button">Editar</button>
+      <button class="btn btn-danger" type="button">Cancelar</button>
+    </section>
+
+  </main>
+</div>

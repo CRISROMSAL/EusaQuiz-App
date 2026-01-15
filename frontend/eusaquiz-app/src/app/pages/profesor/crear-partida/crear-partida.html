@@ -1,0 +1,126 @@
+<div class="dashboard-container">
+
+  <!-- Header igual que dashboard -->
+  <header class="dashboard-header">
+    <div class="logo-container">
+      <div class="logo">
+        <img src="/img/eusaquiz-logo.png" alt="Logo Eusa Quiz" class="logo-img" />
+      </div>
+    </div>
+
+    <h1 class="page-title">Crear/Configurar Partida</h1>
+
+    <div class="user-info">
+        <div class="user-avatar user-avatar-blue">W</div>
+        <span class="user-name">WILLMAN ACOSTA LUGO</span>
+      </div>  
+  </header>
+
+  <!-- Contenido -->
+  <main class="create-content">
+
+    <!-- Información básica -->
+    <section class="form-card">
+      <h2 class="section-title">Información Básica</h2>
+
+      <div class="form-grid">
+        <div class="form-field full">
+          <label class="field-label">Nombre de la partida</label>
+          <input class="field-control" type="text" placeholder="Nombre de la partida" />
+        </div>
+
+        <div class="form-field full">
+          <label class="field-label">Seleccionar asignatura y curso</label>
+          <select class="field-control">
+            <option value="" selected disabled>Seleccionar asignatura y curso</option>
+            <option>DAW - Desarrollo Web (Curso 1)</option>
+            <option>DAW - Desarrollo Web (Curso 2)</option>
+          </select>
+        </div>
+
+        <div class="form-field half">
+          <label class="field-label">Tiempo por pregunta (seg)</label>
+          <input class="field-control" type="number" min="5" step="1" placeholder="Tiempo por pregunta (seg)" />
+        </div>
+
+        <div class="form-field half">
+          <label class="field-label">Nombre de archivo</label>
+          <select class="field-control">
+            <option value="" selected disabled>Nombre de archivo</option>
+            <option>examen_angular.pdf</option>
+            <option>quiz_js.xlsx</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tipo de partida -->
+    <section class="form-card">
+      <h2 class="section-title">Tipo de partida</h2>
+
+      <div class="radio-stack">
+        <label class="radio-item">
+          <input type="radio" name="tipoPartida" checked />
+          <span>En vivo (tiempo real)</span>
+        </label>
+
+        <label class="radio-item">
+          <input type="radio" name="tipoPartida" />
+          <span>Programado (con fecha/hora)</span>
+        </label>
+      </div>
+
+      <!-- (de momento siempre visible, luego lo haremos dinámico con reactive forms) -->
+      <div class="form-grid schedule-grid">
+        <div class="form-field half">
+          <label class="field-label">Fecha</label>
+          <input class="field-control" type="date" />
+        </div>
+
+        <div class="form-field half">
+          <label class="field-label">Hora</label>
+          <input class="field-control" type="time" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Opciones de acceso -->
+    <section class="form-card">
+      <h2 class="section-title">Opciones de Acceso</h2>
+
+      <div class="radio-stack">
+        <label class="radio-item">
+          <input type="radio" name="acceso" checked />
+          <span>Público (cualquier alumno puede jugar)</span>
+        </label>
+
+        <label class="radio-item">
+          <input type="radio" name="acceso" />
+          <span>Privado (sólo alumnos asignados)</span>
+        </label>
+      </div>
+    </section>
+
+    <!-- Modo de calificación -->
+    <section class="form-card">
+      <h2 class="section-title">Modo de Calificación</h2>
+
+      <div class="form-grid">
+        <div class="form-field full">
+          <select class="field-control">
+            <option selected>Velocidad + Precisión</option>
+            <option>Solo Precisión</option>
+            <option>Solo Velocidad</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Botones -->
+    <div class="actions">
+      <button class="btn btn-create" type="button">Crear partida</button>
+      <button class="btn btn-cancel" type="button">Cancelar</button>
+    </div>
+
+  </main>
+</div>
